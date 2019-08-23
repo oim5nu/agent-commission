@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/agent-commission/static/css/main.34de6062.chunk.css",
+    "main.js": "/agent-commission/static/js/main.352101b9.chunk.js",
+    "main.js.map": "/agent-commission/static/js/main.352101b9.chunk.js.map",
+    "runtime~main.js": "/agent-commission/static/js/runtime~main.3d94273a.js",
+    "runtime~main.js.map": "/agent-commission/static/js/runtime~main.3d94273a.js.map",
+    "static/css/2.a407941e.chunk.css": "/agent-commission/static/css/2.a407941e.chunk.css",
+    "static/js/2.5f7eb249.chunk.js": "/agent-commission/static/js/2.5f7eb249.chunk.js",
+    "static/js/2.5f7eb249.chunk.js.map": "/agent-commission/static/js/2.5f7eb249.chunk.js.map",
+    "index.html": "/agent-commission/index.html",
+    "precache-manifest.096a726d7900e636ecf6b25fa15ad11e.js": "/agent-commission/precache-manifest.096a726d7900e636ecf6b25fa15ad11e.js",
+    "service-worker.js": "/agent-commission/service-worker.js",
+    "static/css/2.a407941e.chunk.css.map": "/agent-commission/static/css/2.a407941e.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/agent-commission/static/css/main.34de6062.chunk.css.map",
+    "static/media/semantic.min.css": "/agent-commission/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
