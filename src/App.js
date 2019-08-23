@@ -46,39 +46,40 @@ class App extends Component {
     grandTotal = salePrice + commissionWithGst +  + advertising;
 
     return (
-        <Grid style={{marginTop: "20px"}} columns="equal">
+        <Grid style={{marginTop: "20px"}}  >
           <Grid.Row >
-            <Grid.Column textAlign="right"><div style={{paddingTop: "10px"}}>Sale Price:</div>
+            <Grid.Column textAlign="right" mobile={6}
+              ><div style={{paddingTop: "10px"}}>Sale Price:</div>
             </Grid.Column>
-            <Grid.Column >
-              <div>
-                <Icon name="dollar" />
-                <Input 
-                  type="number"
-                  onChange={this.handleSalePriceChange}
-                />
-              </div>
+            <Grid.Column mobile={8}>
+              <Input
+                fluid
+                icon="dollar"
+                iconPosition="left" 
+                type="number"
+                onChange={this.handleSalePriceChange}
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row >
-            <Grid.Column textAlign="right">
-              <div style={{paddingTop: "10px"}}>Agent Commission:</div></Grid.Column>
-            <Grid.Column >
-              <div>            
-                <Input 
-                  type="number"
-                  onChange={this.handleCommissionPercentageChange}
-                />
-                <Icon name="percent"/> 
-              </div>
- 
+            <Grid.Column textAlign="right" mobile={6}>
+              <div fluid style={{paddingTop: "10px"}}>Agent Commission:</div>
+            </Grid.Column>
+            <Grid.Column mobile={8}>           
+              <Input 
+                fluid
+                icon="percent"
+                iconPosition="right"
+                type="number"
+                onChange={this.handleCommissionPercentageChange}
+              />
             </Grid.Column>
           </Grid.Row>  
           <Grid.Row >
-            <Grid.Column textAlign="right">
+            <Grid.Column textAlign="right" mobile={6}>
               <div style={{paddingTop: "10px"}}>% includes GST:</div>
             </Grid.Column>
-            <Grid.Column >
+            <Grid.Column mobile={6}>
               <Checkbox 
                 style={{paddingTop: "10px"} } toggle
                 onChange={this.toggleCheckbox}
@@ -87,12 +88,12 @@ class App extends Component {
             </Grid.Column>
           </Grid.Row> 
           <Grid.Row >
-            <Grid.Column textAlign="right">
+            <Grid.Column textAlign="right" mobile={6}>
               <div style={{paddingTop: "10px"}}>
                 Commission (excl. GST):
               </div>
             </Grid.Column>
-            <Grid.Column >
+            <Grid.Column mobile={6}>
               <div style={{paddingTop: "10px"}}>
                 <Icon name="dollar" />
                 <span>{commissionWithoutGst ? Number(commissionWithoutGst).toFixed(2) : ""}</span>
@@ -100,8 +101,10 @@ class App extends Component {
             </Grid.Column>
           </Grid.Row>                               
           <Grid.Row >
-            <Grid.Column textAlign="right"><div style={{paddingTop: "10px"}}>GST:</div></Grid.Column>
-            <Grid.Column >
+            <Grid.Column textAlign="right" mobile={6}>
+              <div style={{paddingTop: "10px"}}>GST:</div>
+            </Grid.Column>
+            <Grid.Column mobile={6}>
               <div style={{paddingTop: "10px"}}>
                 <Icon name="dollar" />
                 <span>{ GST ? Number(GST).toFixed(2) : ""}</span>
@@ -109,34 +112,36 @@ class App extends Component {
             </Grid.Column>
           </Grid.Row>                               
           <Grid.Row >
-            <Grid.Column textAlign="right">
+            <Grid.Column textAlign="right" mobile={6}>
               <div style={{paddingTop: "10px"}}>
                 Commission (incl. GST):
               </div>
             </Grid.Column>
-            <Grid.Column >
+            <Grid.Column mobile={6}>
               <div style={{paddingTop: "10px"}}><Icon name="dollar" />
                 <span>{commissionWithGst ? Number(commissionWithGst).toFixed(2) : ""}</span>
               </div>
             </Grid.Column>
           </Grid.Row>                               
           <Grid.Row >
-            <Grid.Column textAlign="right"><div style={{paddingTop: "10px"}}>Advertising:</div></Grid.Column>
-            <Grid.Column >
-              <div>
-                <Icon name="dollar" />
-                <Input 
-                  type="number"
-                  onChange={this.handleAdvertisingChange}
-                />
-              </div>
+            <Grid.Column textAlign="right" mobile={6}>
+              <div style={{paddingTop: "10px"}}>Advertising:</div>
+            </Grid.Column>
+            <Grid.Column mobile={8}>
+              <Input 
+                fluid
+                icon="dollar"
+                iconPosition="left"
+                type="number"
+                onChange={this.handleAdvertisingChange}
+              />
             </Grid.Column>
           </Grid.Row>                               
           <Grid.Row >
-            <Grid.Column textAlign="right">
+            <Grid.Column textAlign="right" mobile={6}>
               <div style={{paddingTop: "10px"}}>Grand Total:</div>
             </Grid.Column>
-            <Grid.Column >
+            <Grid.Column mobile={6}>
               <div style={{paddingTop: "10px"}}>
                 <Icon name="dollar" />
                 <span>{grandTotal? Number(grandTotal).toFixed(2) : ""}</span>
@@ -146,7 +151,6 @@ class App extends Component {
         </Grid>
     );
   }
-
 }
 
 export default App;
